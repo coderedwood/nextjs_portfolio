@@ -6,22 +6,24 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "2gua.rainbow-brackets",
-        "xabikos.ReactSnippets",
-        "aaronthomas.vscode-snazzy-operator",
-        "MaxfieldWalker.vscode-color-theme-spirited-away",
-        "vscode-icons-team.vscode-icons",
-        "formulahendry.auto-close-tag",
-        "dzannotti.vscode-babel-coloring",
-        "gerane.Theme-Bittersweet",
-        "dbaeumer.vscode-eslint",
-        "mquandalle.graphql",
-        "yzhang.markdown-all-in-one",
-        "christian-kohler.path-intellisense",
-        "esbenp.prettier-vscode",
-        "orsenkucher.vscode-graphql",
-        "styled-components.vscode-styled-components"
-      ]
+		"2gua.rainbow-brackets",
+		"xabikos.ReactSnippets",
+		"aaronthomas.vscode-snazzy-operator",
+		"MaxfieldWalker.vscode-color-theme-spirited-away",
+		"vscode-icons-team.vscode-icons",
+		"formulahendry.auto-close-tag",
+		"dzannotti.vscode-babel-coloring",
+		"gerane.Theme-Bittersweet",
+		"dbaeumer.vscode-eslint",
+		"mquandalle.graphql",
+		"yzhang.markdown-all-in-one",
+		"christian-kohler.path-intellisense",
+		"esbenp.prettier-vscode",
+		"orsenkucher.vscode-graphql",
+		"styled-components.vscode-styled-components",
+		"bradlc.vscode-tailwindcss",
+		"dsznajder.es7-react-js-snippets"
+	]
     }
   },
   // Features to add to the dev container. More info: https://containers.dev/features.
