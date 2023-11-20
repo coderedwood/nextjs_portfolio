@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const TechnologiesCard = ({imageUrl, title}) => {
   return (
-    <div className='bg-white rounded shadow-md'>
+    <div className='bg-white rounded shadow-md mt-2 mb-2'>
         <div className='mt-3'>
             <Image
                 src={imageUrl}
