@@ -35,7 +35,7 @@ const ProjectsSection = () => {
 
   return (
     <>
-        <h2>My Projects</h2>
+        <h2 className='text-3xl font-bold mt-3'>My Projects</h2>
         <div className='text-white flex flex-row justify-center items-center gap-2 py-6'>
             <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"}/>
             <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"}/>
