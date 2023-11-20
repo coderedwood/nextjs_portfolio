@@ -59,6 +59,11 @@ const technologiesData = [
         id: 12,
         title:"Cobol",
         image:"/images/technologies/cobol-logo.svg"
+    },
+    {
+        id: 13,
+        title:"Snowflake",
+        image:"/images/technologies/snowflake-logo.svg"
     }
 ]
 
@@ -68,10 +73,10 @@ const TechnologiesSection = () => {
         <div className='justify-center text-center mx-auto'>
             <div>
                 <h2 className='text-3xl font-bold mb-4'>
-                    Technologies - Just some of what I've worked with.
+                    Technologies - An ever expanding list as I keep current.
                 </h2>
                 <p className='text-base lg:text-lg'>
-                    Below is a sample of the technologies I've had direct experience with assessing or using.
+                    Below is merely a selection of some technologies I have worked with.
                 </p>
             </div>
             <div className='flex flex-wrap justify-center gap-6 md:gap-8'>

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const TechnologiesCard = ({imageUrl, title}) => {
   return (
-    <div className='bg-white rounded-md shadow-lg border p-3 m-4 text-center w-[165px] h-[172px] relative'>
+    <div className='bg-white rounded-md shadow-lg border p-3 m-4 text-center w-[165px] h-[172px] relative hover:bg-slate-200'>
             <div className='absolute transform top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2'>
               <Image
                   src={imageUrl}
