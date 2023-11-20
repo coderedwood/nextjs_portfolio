@@ -45,7 +45,7 @@ const technologiesData = [
 const TechnologiesSection = () => {
   return (
     <section>
-        <div className='flex flex-col col-span-3 md:col-span-12 container justify-center text-center'>
+        <div className='justify-center text-center mx-auto'>
             <div>
                 <h2 className='text-xl'>
                     Technologies - Just some of what I've worked with.
@@ -54,7 +54,7 @@ const TechnologiesSection = () => {
                     Below is a sample of the technologies I've had direct experience with assessing or using.
                 </p>
             </div>
-            <div>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8'>
             {technologiesData.map((project)=> 
                 <TechnologiesCard 
                     key={project.id} 

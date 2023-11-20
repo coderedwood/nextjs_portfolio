@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 const TechnologiesCard = ({imageUrl, title}) => {
   return (
-    <div className='bg-white rounded shadow-md mt-2 mb-2'>
-        <div className='mt-3'>
+    <div className='bg-white rounded shadow-lg'>
+        <div className='rounded-xl'>
             <Image
                 src={imageUrl}
                 alt='linux logo'
@@ -14,7 +14,7 @@ const TechnologiesCard = ({imageUrl, title}) => {
                 height={60}
             />
         </div>
-        <div className='mb-3'>
+        <div className='text-center pt-1'>
             <span className='font-bold text-slate-500'>{title}</span>
         </div>
     </div>
