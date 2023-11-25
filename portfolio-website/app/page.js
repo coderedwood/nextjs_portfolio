@@ -15,6 +15,7 @@ export default function Home() {
       <AboutSection />
       <TechnologiesSection />
       <ProjectsSection />
+      {/* To do 2 more sections */}
     </div>
     <Footer />
     </main>
