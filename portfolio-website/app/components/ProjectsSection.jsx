@@ -8,20 +8,29 @@ const projectData = [
     {
         id: 1,
         title:"OldHarbourNews.com",
-        description: "Project decription 1",
+        description: "Serviced and maintained this website",
         image:"/images/projects/OHN.png",
         tag:["All","Mobile"],
-        gitUrl:"/",
+        gitUrl:"",
         projectUrl:"https://www.oldharbournews.com/"
     },
     {
         id: 2,
         title:"DrKurtWaulFoundation.com",
-        description: "Project decription 2",
+        description: "Deployed site for a foundation",
         image:"/images/projects/DKWF.png",
         tag:["All", "Web"],
-        gitUrl:"/",
-        projectUrl:"http://www.drkurtwaulfoundation.com"
+        gitUrl:"",
+        projectUrl:"https://www.drkurtwaulfoundation.com"
+    },
+    {
+        id: 3,
+        title:"Urgedservices.com",
+        description: "Collaborative development on a commercial food delivery service website",
+        image:"/images/projects/urgedservices.png",
+        tag:["All", "Web","Mobile"],
+        gitUrl:"https://github.com/jammelOSjohnson/urgedinternational.com",
+        projectUrl:"https://urgedservices.com"
     }
 ]
 
