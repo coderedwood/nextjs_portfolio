@@ -33,7 +33,9 @@ const TAB_DATA = [
         id: "certifications",
         content: (
             <ul className='list-disc pl-2'>
-                <li>Microsoft Cloud Fundamentals</li>
+                <li>
+                Microsoft Certified: Azure Fundamentals
+                </li>
             </ul>
         )
     }
@@ -50,7 +52,7 @@ const AboutSection = () => {
     };
 
   return (
-    <section className='text-white'>
+    <section className='text-white' id='about'>
         <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
             <Image src="/images/about-image.jpeg" width={500} height={500}/>
             <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
@@ -58,7 +60,10 @@ const AboutSection = () => {
                 <p className='text-base lg:text-lg'>I'm a full stack web developer with a passion for all things programming, 
                     automation and devops. I have worked with various technologies such as Microsoft Azure,
                     ReactJS, NextJS, NodeJS, .Net, Python, Oracle SQL, DB2 SQL, MongoDB, HTML, CSS, 
-                    Vanilla Javascript and Git. I learn quickly and I'm always seeking new 
+                    Vanilla Javascript and Git.
+                 </p>
+                 <br />
+                <p className='text-base lg:text-lg'>I learn quickly and I'm always seeking new 
                     technologies to learn and apply in practical and industry leading ways. I work well with 
                     teams and I'm always excited to leverage the experience of others to build robust technological
                     solutions.
