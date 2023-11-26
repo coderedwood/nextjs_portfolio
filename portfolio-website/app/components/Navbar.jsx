@@ -9,11 +9,11 @@ const navLinks = [
   {title: "About",
   path: "#about"
   },
+  {title: "Technologies",
+  path: "#technologies"
+  },
   {title: "Projects",
   path: "#projects"
-  },
-  {title: "Contact",
-  path: "#contact"
   }
 ];
 

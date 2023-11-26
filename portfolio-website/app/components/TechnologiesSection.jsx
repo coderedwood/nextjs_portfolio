@@ -64,12 +64,17 @@ const technologiesData = [
         id: 13,
         title:"Snowflake",
         image:"/images/technologies/snowflake-logo.svg"
+    },
+    {
+        id: 14,
+        title:"Snaplogic",
+        image:"/images/technologies/snaplogic-logo.svg"
     }
 ]
 
 const TechnologiesSection = () => {
   return (
-    <section>
+    <section id='technologies'>
         <div className='justify-center text-center mx-auto'>
             <div>
                 <h2 className='text-3xl font-bold mb-4'>
