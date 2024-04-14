@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <main className="flex min-h-screen flex-col bg-gradient-to-tr from-[#FEA932] from-[-2%] via-[#F7E6CE] via-[percentage:30%_80%] to-[#FEA932] to-100%">
     <Navbar />
     <div className="container mt-24 mx-auto px-12 py-4">
       <HeroSection />
