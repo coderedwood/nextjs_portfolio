@@ -84,7 +84,7 @@ const Navbar = () => {
           </ul>
         </div>
         </div>
-        {navbarOpen?<MenuOverlay links={navLinks}/>:null}
+        {navbarOpen?<MenuOverlay links={navLinks} sLinks={socialLinks}/>:null}
     </nav>
   )
 }
