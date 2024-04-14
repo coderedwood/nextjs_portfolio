@@ -9,6 +9,21 @@ const HeroSection = () => {
   return (
     <section className='lg:py-16'>
       <div className="grid grid-cols-1 sm:grid-cols-12">
+        <div className="col-span-5 place-self-center mt-4 lg:mt-0">
+          <motion.div
+            initial={{opacity: 0, scale: 0.5,}}
+            animate={{opacity: 1, scale: 1}}
+            transition={{duration: 0.5}} 
+             className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+            <Image
+              src="/images/IMG_2761.jpeg"
+              alt='hero image'
+              className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]'
+              width={300}
+              height={300}
+            />
+          </motion.div>
+        </div>
         <motion.div
           initial={{opacity: 0, scale: 0.5}}
           animate={{opacity: 1, scale: 1}}
@@ -46,21 +61,6 @@ const HeroSection = () => {
             </button> */}
           </div>
         </motion.div>
-        <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-          <motion.div
-            initial={{opacity: 0, scale: 0.5,}}
-            animate={{opacity: 1, scale: 1}}
-            transition={{duration: 0.5}} 
-             className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-            <Image
-              src="/images/IMG_2761.jpeg"
-              alt='hero image'
-              className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]'
-              width={300}
-              height={300}
-            />
-          </motion.div>
-        </div>
       </div>
     </section>
   );
