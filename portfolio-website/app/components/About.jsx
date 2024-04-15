@@ -2,6 +2,42 @@
 import React, { useTransition, useState } from 'react';
 import Image from 'next/image';
 import TabButton from './TabButton';
+import { Jomolhari, Montserrat, JetBrains_Mono } from 'next/font/google';
+
+const jomolhari = Jomolhari({
+  variable: '--font-jomolhari',
+  subsets:['tibetan'],
+  weight:['400']
+});
+const montserrat = Montserrat({
+  variable: '--font-montserrat',
+  subsets:['cyrillic'],
+  weight:['800','700','600']
+});
+const jetbrains_mono = JetBrains_Mono({
+  variable: '--font-jetbrains_mono',
+  subsets:['latin'],
+  weight:['800','700','600']
+});
+
+const metrics = [
+    {
+        value: 40,
+        type: "Satisfied Clients"
+    },
+    {
+        value: 20,
+        type: "Projects Completed"
+    },
+    {
+        value: 10,
+        type: "Years of Industry Experience"
+    },
+    {
+        value: 4,
+        type: "Years of Developer Experience"
+    },
+];
 
 const TAB_DATA = [
     {
@@ -52,30 +88,51 @@ const About = () => {
     };
 
   return (
-    <section className='text-white' id='about'>
-        <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
-            <Image src="/images/about-image.jpeg" width={500} height={500}/>
-            <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
-                <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
-                <p className='text-base lg:text-lg'>I'm a full stack web developer with a passion for all things programming, 
-                    automation and devops. I have worked with various technologies such as Microsoft Azure,
-                    ReactJS, NextJS, NodeJS, .Net, Python, Oracle SQL, DB2 SQL, MongoDB, HTML, CSS, 
-                    Vanilla Javascript and Git.
-                 </p>
-                 <br />
-                <p className='text-base lg:text-lg'>I learn quickly and I'm always seeking new 
-                    technologies to learn and apply in practical and industry leading ways. I work well with 
-                    teams and I'm always excited to leverage the experience of others to build robust technological
-                    solutions.
-                 </p>
-                 <div className='flex flex-row mt-8'>
+    <section className='text-black' id='about'>
+    <div className='text-center py-4 mt-16'>
+        <h1 className='mb-4 text-4xl lg:text-5xl xl:text-[80px] font-extrabold'>
+            <span className={`text-black ${montserrat.variable} font-title`}>TECHNOLOGY & CHALLENGE DRIVEN!</span>
+        </h1>
+    </div>
+    <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
+            <div className={`mt-4 md:mt-0 text-left flex flex-col h-full ${jetbrains_mono.variable} font-subtitle`}>
+                <h2 className='text-4xl font-bold text-black mb-4'>BIOGRAPHY</h2>
+                <p className='text-base lg:text-lg'>Hello, I'm Dwayne Redwood, a seasoned web developer and UI/UX enthusiast dedicated to crafting visually appealing, functional, and user-centric digital solutions. With 4 years of hands-on experience in the industry, I'm constantly exploring novel approaches to transform clients' concepts into reality.
+                </p>
+                <br />
+                <p className='text-base lg:text-lg'>
+                    To me, design transcends mere aesthetics – it's about problem-solving and fostering seamless, delightful user experiences. Whether I'm tackling a website, mobile app, or any digital endeavour, I infuse each project with a relentless pursuit of design excellence and user satisfaction.
+                </p>
+                <br />
+                <p className='text-base lg:text-lg'>
+                    I eagerly anticipate the chance to leverage my expertise and enthusiasm to elevate your next venture."
+                </p>
+                {/*<div className='flex flex-row mt-8'>
                     <TabButton selectTab={() => handleTabChange("skills")} active={tab==="skills"}>Skills</TabButton>
                     <TabButton selectTab={() => handleTabChange("education")} active={tab==="education"}>Education</TabButton>
                     <TabButton selectTab={() => handleTabChange("certifications")} active={tab==="certifications"}>Certifications</TabButton>
-                 </div>
-                 <div className='mt-8'>{ TAB_DATA.find((t)=>t.id === tab)?.content }</div>
+                </div>
+                <div className='mt-8'>{ TAB_DATA.find((t)=>t.id === tab)?.content }
+                </div>*/}
             </div>
-        </div>
+            <div className='class="relative col-span-2 h-max rounded-2xl border-2 border-solid border-dark  bg-light p-8 dark:border-light dark:bg-dark xl:col-span-4 md:col-span-8 md:order-1'>
+                <div className=''>
+                    <Image src="/images/IMG_2761.JPEG" alt='coderedwood' className='rounded-2xl w-[300] h-[300]' width={300} height={300}/>
+                </div>
+            </div>
+            <div class="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row  xl:items-center md:order-3">
+                <div class="flex flex-col items-end justify-center xl:items-center">
+                    <span class="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                        <span>40</span>+</span>
+                        <h2 class="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75  xl:text-center md:text-lg sm:text-base xs:text-sm">satisfied clients</h2>
+                </div>
+                <div class="flex flex-col items-end justify-center xl:items-center">
+                    <span class="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                        <span>50</span>+</span>
+                        <h2 class="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75  xl:text-center md:text-lg sm:text-base xs:text-sm">projects completed</h2>
+                    </div>
+                <div class="flex flex-col items-end justify-center xl:items-center"><span class="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl"><span>4</span>+</span><h2 class="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75  xl:text-center md:text-lg sm:text-base xs:text-sm">Years of experience</h2></div></div>
+    </div>
     </section>
   );
 };

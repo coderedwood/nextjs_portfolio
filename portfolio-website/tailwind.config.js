@@ -14,6 +14,8 @@ module.exports = {
       },
       fontFamily:{
         logo: ['var(--font-pacifico)'],
+        title: ['var(--font-montserrat)'],
+        subtitle: ['var(--font-jetbrains_mono)'],
         paragraph: ['var(--font-jomolhari)'],
       },
     },
