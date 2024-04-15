@@ -26,7 +26,7 @@ const HeroSection = () => {
             <Image
               src="/images/svg/spiderweb.svg"
               alt='hero image'
-              className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] xl:w-[800px] xl:h-[800px]'
+              className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] xl:w-[800px] xl:h-[800px]'
               width={300}
               height={300}
             />
