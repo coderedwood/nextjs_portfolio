@@ -41,7 +41,7 @@ const TAB_DATA = [
     }
 ]
 
-const AboutSection = () => {
+const About = () => {
     const [tab, setTab] = useState("Skills");
     const [isPending, startTransition] = useTransition();
 
@@ -80,4 +80,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default About;

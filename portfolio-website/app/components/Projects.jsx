@@ -35,7 +35,7 @@ const projectData = [
 ]
 
 
-const ProjectsSection = () => {
+const Projects = () => {
     const [tag, setTag] = useState('All');
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
@@ -100,4 +100,4 @@ const ProjectsSection = () => {
     );
 };
 
-export default ProjectsSection;
+export default Projects;
