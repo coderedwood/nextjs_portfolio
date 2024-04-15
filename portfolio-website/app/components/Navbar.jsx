@@ -44,7 +44,7 @@ const socialLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100'>
+    <nav className='fixed top-0 left-0 right-0 z-10 bg-transparent'>
         <div className='flex flex-wrap items-center justify-between mx-auto px-4 py-2'>
         <div className='mobile-menu block md:hidden'>
           {
@@ -71,7 +71,7 @@ const Navbar = () => {
             }
           </ul>
         </div>
-        <Link href={"/"} className='flex items-center justify-center text-4xl md:text-4xl text-white font-semibold rounded-full w-16 h-16 dark:border-2 dark:border-solid dark:border-light'>DR</Link>
+        <Link href={"/"} className='flex items-center justify-center text-4xl md:text-4xl text-black font-semibold rounded-full w-16 h-16 dark:border-2 dark:border-solid dark:border-black'>DR</Link>
         <div className="menu hidden md:block md:w-auto" id='navbar'>
           <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8'>
             {
