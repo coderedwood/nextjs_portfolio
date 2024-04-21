@@ -6,6 +6,7 @@ import React from 'react';
 import AboutBiographySection from './AboutBiographySection';
 import AboutSkillSection from './AboutSkillSection';
 import AboutInterestSection from './AboutInterestSection';
+import AboutExperienceSection from './AboutExperienceSection';
 
 {/*const TAB_DATA = [
     {
@@ -58,9 +59,10 @@ const About = () => {
 */}
   return (
     <>
-    <AboutBiographySection />
-    <AboutSkillSection />
-    <AboutInterestSection />
+        <AboutBiographySection />
+        <AboutSkillSection />
+        <AboutInterestSection />
+        <AboutExperienceSection />
     </>
   );
 };
