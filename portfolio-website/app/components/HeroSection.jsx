@@ -68,7 +68,7 @@ const HeroSection = () => {
           As a developer, I specialize in crafting innovative solutions utilizing cutting-edge technologies through diverse development approaches such as Full Stack Development, Containerized Applications, and Database Abstraction.
           </p>
           <div>
-            {<button className={`flex px-6 py-3 w-full sm:w-fit rounded-xl mr-4 ${jomolhari.variable} font-paragraph bg-green-900 border-[3px] border-white hover:border-slate-400 hover:bg-slate-200 text-white`}>
+            {<button className={`flex px-6 py-3 w-full sm:w-fit rounded-xl mr-4 ${jomolhari.variable} font-paragraph bg-green-900 border-[3px] border-white hover:border-green-900 hover:bg-slate-200 hover:text-green-900 text-white`}>
               Resume <Image src="https://www.svgrepo.com/download/500853/external.svg" className='relative pt-0 text-white' alt='external icon' width={25} height={25}/>
             </button>}
             {/* <button className='px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-tr from-blue-500 via-red-400 to-red-800 hover:bg-slate-800 text-white mt-3'>
