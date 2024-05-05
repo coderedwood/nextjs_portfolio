@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import React from 'react';
 import Image from 'next/image';
 import { Jomolhari, Montserrat, JetBrains_Mono } from 'next/font/google';
