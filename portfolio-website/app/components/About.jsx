@@ -58,9 +58,9 @@ const About = () => {
 */}
   return (
     <>
-    <AboutBiographySection />
-    <AboutSkillSection />
-    <AboutInterestSection />
+        <AboutBiographySection />
+        <AboutSkillSection />
+        <AboutInterestSection />
     </>
   );
 };
