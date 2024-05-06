@@ -20,21 +20,22 @@ const jomolhari = Jomolhari({
 
 const ContactForm = () => {
   return (
-    <form action='onSubmit'>
-        <h4>Contact Me</h4>
-        <div className=' flex-row col-span-12 form-group'>
-            <input type='text' name='name' placeholder='Name' required></input>
-        </div>
-        <div className=' flex-row col-span-12 form-group' >
-            <input type='text' name='email' placeholder='Email' required></input>
-        </div>
-        <div className=' flex-row col-span-12 form-group' >
-            <input type='text' name='subject' placeholder='Subject'></input>
-        </div>
-        <div className=' flex-row col-span-12 form-group' >
-            <input type='text' name='message' placeholder='Message' required></input>
-        </div>
-        <button className={`flex px-6 py-3 w-full sm:w-fit rounded-xl mr-4 ${jomolhari.variable} font-paragraph bg-green-900 border-[3px] border-white hover:border-green-900 hover:bg-slate-200 hover:text-green-900 text-white`} type='submit'>Send</button>
+    <form action='onSubmit' className="grid md:grid-cols-6 gap-4 md:mr-10">
+      <h4 className={`col-span-full text-left ${jetbrains_mono.variable} font-subtitle text-3xl font-semibold`}>Contact Me</h4>
+      <div className='flex flex-col py-2 md:col-span-3 form-group'>
+          <input className=' border-b-green-900 border-b-[1px] h-10' type='text' name='name' placeholder='Name' required />
+      </div>
+      <div className='flex flex-col md:pl-2 md:pr-2 py-2 md:col-span-3 form-group'>
+          <input className=' border-b-green-900 border-b-[1px] h-10' type='text' name='email' placeholder='Email' required />
+      </div>
+      <div className='flex flex-col md:pr-2 py-2 md:col-span-full form-group'>
+          <input className=' border-b-green-900 border-b-[1px] h-10' type='text' name='subject' placeholder='Subject' />
+      </div>
+      <div className='flex flex-col md:pr-2 py-2 md:col-span-full form-group'>
+          <input className=' border-b-green-900 border-b-[1px] h-[200px]' type='text' name='message' placeholder='Message' required />
+      </div>
+
+      <button className={`flex m-auto px-8 py-2 rounded-xl ${jomolhari.variable} font-paragraph bg-green-900 border-[3px] border-white hover:border-green-900 hover:bg-slate-200 hover:text-green-900 text-white`} type='submit'>Send</button>
     </form>
   )
 }
