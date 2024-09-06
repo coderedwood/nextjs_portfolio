@@ -16,22 +16,22 @@ const jetbrains_mono = JetBrains_Mono({
 const interestCollection = [
   { interest: "DevOps & Automation",
   caption: "Creating seamless workflow solutions anchored in logic with high hands-off reproducibility and reliability.",
-  gridColour: 'bg-[#FDCE36]',
+  gridColour: 'bg-[#FFC00D]',
   id: 1
   },
   { interest: "AI & Machine Learning",
   caption: "Exploring and working with AI, LLM and Machine Learning Technologies",
-  gridColour: 'bg-[#327949]',
+  gridColour: 'bg-[#225d35]',
   id: 2
   },
   { interest: "Full Stack Development",
   caption: "Creating progressive web applications and APIs using various tech stacks for optimised solutions.",
-  gridColour: 'bg-[#FD291E]',
+  gridColour: 'bg-[#b01008]',
   id: 3
   },
   { interest: "Data Engineering Solutions",
   caption: "Enabling, processing and connecting data centric solutions through current standards and approaches.",
-  gridColour: 'bg-[#3262C5]',
+  gridColour: 'bg-[#194F82]',
   id: 4
   },
 ];
