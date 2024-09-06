@@ -67,10 +67,10 @@ const AboutInterestSection = () => {
         </h1>
       </div>
       <main className='flex container mx-auto py-20 justify-center'>
-          <section className='grid grid-cols-6 gap-4 w-full'>
+          <section className='lg:grid lg:grid-cols-6 lg:gap-4 w-full'>
         {
         interestCollection.map((content,index)=>(
-          <div key={content.id} className={`interest-item p-6 border-4 border-black rounded-[12px] ${content.gridColour} flex flex-col gap-1 
+          <div key={content.id} className={`sm:mb-6 lg:mb-0 interest-item p-6 border-4 border-black rounded-[12px] ${content.gridColour} flex flex-col gap-1 
           ${selectedId === content.id
             ? 'col-span-4'
             : (selectedId === content.id + 1 && index % 2 === 0) ||
