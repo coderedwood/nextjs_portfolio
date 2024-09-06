@@ -67,7 +67,7 @@ const AboutBiographySection = () => {
                 <div className='mt-8'>{ TAB_DATA.find((t)=>t.id === tab)?.content }
                 </div>*/}
             </div>
-            <div className='class="relative h-auto col-span-3 rounded-2xl border-2 border-solid border-dark bg-[#FFC10D] p-8 dark:border-light dark:bg-dark md:order-1'>
+            <div className='class="relative aspect-[1/1] col-span-3 rounded-2xl border-2 border-solid border-dark bg-[#FFC10D] p-8 dark:border-light dark:bg-dark md:order-1'>
                     <Image src="/images/IMG_2761.JPEG" alt='coderedwood' className='h-auto w-full rounded-2xl' width={300} height={300}/>
             </div>
             <div class="col-span-2 flex flex-col justify-between items-center md:order-3">
