@@ -1,7 +1,9 @@
 import React from "react";
 
 const ImageContent = ({imageUrl}) => {
-    <img src={imageUrl}/>
+    return(
+        <img src={imageUrl}/>
+    )
 }
 
 export default ImageContent;

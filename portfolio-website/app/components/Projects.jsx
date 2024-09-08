@@ -13,7 +13,7 @@ const Projects = () => {
       description:
         "A news site that is dedicated to providing news about Old Harbour and other areas of Jamaica to Jamaica and the Jamaican diaspora",
       contentType: "Website",
-      image: "/images/projects/macbook_ohn.png",
+      imageUrl: "/images/projects/macbook_ohn.png",
       gitUrl: "",
       projectUrl: "https://www.oldharbournews.com/",
     },
@@ -24,7 +24,7 @@ const Projects = () => {
       role: "Website Admin &nbsp; • &nbsp; Support",
       description: "Deployed site for a foundation",
       contentType: "Website",
-      image: "/images/projects/macbook_DKWF.png",
+      imageUrl: "/images/projects/macbook_DKWF.png",
       gitUrl: "",
       projectUrl: "https://www.drkurtwaulfoundation.com",
     },
@@ -36,7 +36,7 @@ const Projects = () => {
       description:
         "Collaborative development on a commercial food delivery service website",
       contentType: "Website &nbsp; • &nbsp; Delivery App",
-      image: "/images/projects/macbook_urged.png",
+      imageUrl: "/images/projects/macbook_urged.png",
       gitUrl: "https://github.com/jammelOSjohnson/urgedinternational.com",
       projectUrl: "https://urgedservices.com",
     },
