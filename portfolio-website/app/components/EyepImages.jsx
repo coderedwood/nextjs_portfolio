@@ -2,23 +2,23 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 // import eyepTabletImg from '../../../../Assets/Images/Eyep/Tablet.png';
-import macbook_DKWF from '../../public/images/projects/macbook_DKWF.png';
+// import macbook_ohn from '../Assets/Images/Eyep/macbook_ohn.png';
 // import eyepIphoneImg from '../../../../Assets/Images/Eyep/Iphone.png';
 
 
-const Iphone = styled.img.attrs({
-  style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 22}%) scale(0.65)`,
-  }),
-})`
-transition: transform 0.2s ease-out;
-position: absolute;
-bottom: -320vh;
-transform-origin: left center;
-left:2vw;
-/* border: 1px dashed red; */
-height: 100vh; 
-`;
+// const Iphone = styled.img.attrs({
+//   style: ({ scroll }) => ({
+//     transform: `translate(0px,-${(scroll) * 22}%) scale(0.65)`,
+//   }),
+// })`
+// transition: transform 0.2s ease-out;
+// position: absolute;
+// bottom: -320vh;
+// transform-origin: left center;
+// left:2vw;
+// /* border: 1px dashed red; */
+// height: 100vh; 
+// `;
 
 const Tablet = styled.img.attrs({
   style: ({ scroll }) => ({
@@ -29,9 +29,9 @@ transition: transform 0.2s ease-out;
 position: absolute;
 bottom: -180vh;
 transform-origin: right center;
-right:2vw;
+right:-6vw;
 /* border: 1px dashed red; */
-height: 100vh; 
+/* height: 100vh;  */
 `;
 
 class EyepImages extends Component {
@@ -47,7 +47,7 @@ class EyepImages extends Component {
 
     return (
       <React.Fragment>
-        <Tablet src={macbook_DKWF} scroll={scrollPercent} alt="eyepTablet" />
+        <Tablet className=' max-w[100%]' src="/images/projects/macbook_ohn.png" scroll={scrollPercent} alt="macbook_ohn" />
         {/* <Iphone src={eyepIphoneImg} scroll={scrollPercent} alt="eyepIphone" /> */}
       </React.Fragment>
     );

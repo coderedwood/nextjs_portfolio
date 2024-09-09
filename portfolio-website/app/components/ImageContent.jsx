@@ -68,6 +68,15 @@ class ImageContent extends Component {
     const boxHeight = pageSplitTimes * 100;
     return (
       <ImageContainer>
+        <ImageBox height={boxHeight}>
+          <EyepImages
+            boxHeight={boxHeight}
+            index={1}
+            scrollPercent={scrollPercent}
+            screenHeight={screenHeight}
+            scrollHeight={scrollHeight}
+          />
+        </ImageBox>
         {/* <ImageBox height={boxHeight}>
           <FastRetailingImages
             boxHeight={boxHeight}
@@ -86,15 +95,6 @@ class ImageContent extends Component {
             scrollHeight={scrollHeight}
           />
         </ImageBox> */}
-        <ImageBox height={boxHeight}>
-          <EyepImages
-            boxHeight={boxHeight}
-            index={3}
-            scrollPercent={scrollPercent}
-            screenHeight={screenHeight}
-            scrollHeight={scrollHeight}
-          />
-        </ImageBox>
         {/* <ImageBox height={boxHeight}>
           <TeslaImages
             boxHeight={boxHeight}
