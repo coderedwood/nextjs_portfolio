@@ -9,7 +9,8 @@ const Projects = () => {
       id: 1,
       bullletText: "01",
       title: "OldHarbourNews.com",
-      role: "Website Admin &nbsp; • &nbsp; Support",
+      // role: "Website Admin &nbsp; • &nbsp; Support",
+      role: ["Website Admin"," • ", "Support"],
       description:
         "A news site that is dedicated to providing news about Old Harbour and other areas of Jamaica to Jamaica and the Jamaican diaspora",
       contentType: "Website",

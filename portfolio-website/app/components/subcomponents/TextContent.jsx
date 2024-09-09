@@ -1,6 +1,7 @@
 "use client";
 
 const TextContent = ({
+  id,
   bullletText,
   title,
   role,
@@ -8,7 +9,7 @@ const TextContent = ({
   contentType,
 }) => {
   return (
-    <section className="flex flex-col top-0 left-0 fixed text-black h-[100vh] w-[50%]">
+    <section className={`flex flex-col top-0 left-0 fixed text-black h-[100vh] w-[50%]`}>
       <div className="p-[5%] block text-2xl font-semibold box-border">
         <span>{bullletText}</span>
       </div>
