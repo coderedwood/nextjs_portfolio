@@ -15,7 +15,7 @@ const TextContent = ({
       </div>
       <div className="h-[100%] pt-[5%] items-center">
         <div className="flex flex-col w-[100%] pt-[5%] pr-[5%] pb-[5%] pl-[10%]">
-          <div className="text-6xl font-bold">
+          <div className="text-6xl md:text-3xl font-bold">
             <span>{title}</span>
           </div>
           <div className="text-2xl font-semibold pt-5">
