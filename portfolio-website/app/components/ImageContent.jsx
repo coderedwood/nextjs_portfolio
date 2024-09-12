@@ -7,7 +7,7 @@ import vhCheck from 'vh-check';
 // import WhatsMyFoodImages from './ParallaxImages/WhatsMyFoodImages';
 // import LashicImages from './ParallaxImages/LashicImages';
 // import TeslaImages from './ParallaxImages/TeslaImages';
-import EyepImages from './EyepImages';
+import DKWFImage from './DKWFImage';
 
 const ImageContainer = styled.div`
 /* border: 0.1px dashed black; */
@@ -68,15 +68,7 @@ class ImageContent extends Component {
     const boxHeight = pageSplitTimes * 100;
     return (
       <ImageContainer>
-        <ImageBox height={boxHeight}>
-          <EyepImages
-            boxHeight={boxHeight}
-            index={1}
-            scrollPercent={scrollPercent}
-            screenHeight={screenHeight}
-            scrollHeight={scrollHeight}
-          />
-        </ImageBox>
+        
         {/* <ImageBox height={boxHeight}>
           <FastRetailingImages
             boxHeight={boxHeight}
@@ -86,6 +78,17 @@ class ImageContent extends Component {
             scrollHeight={scrollHeight}
           />
         </ImageBox>
+        */}
+        <ImageBox height={boxHeight}>
+          <DKWFImage
+            boxHeight={boxHeight}
+            index={2}
+            scrollPercent={scrollPercent}
+            screenHeight={screenHeight}
+            scrollHeight={scrollHeight}
+          />
+        </ImageBox>
+        {/*
         <ImageBox height={boxHeight}>
           <LashicImages
             boxHeight={boxHeight}

@@ -31,10 +31,10 @@ bottom: -180vh;
 transform-origin: right center;
 right:-6vw;
 /* border: 1px dashed red; */
-/* height: 100vh;  */
+/* height: 100vh; */ 
 `;
 
-class EyepImages extends Component {
+class DKWFImage extends Component {
   render() {
     let { scrollPercent } = this.props;
     const {
@@ -47,14 +47,14 @@ class EyepImages extends Component {
 
     return (
       <React.Fragment>
-        <Tablet className=' max-w[100%]' src="/images/projects/macbook_ohn.png" scroll={scrollPercent} alt="macbook_ohn" />
+        <Tablet className=' max-w[100%]' src="/images/projects/macbook_DKWF.png" scroll={scrollPercent} alt="drkurtwaulfoundation_image" />
         {/* <Iphone src={eyepIphoneImg} scroll={scrollPercent} alt="eyepIphone" /> */}
       </React.Fragment>
     );
   }
 }
 
-EyepImages.propTypes = {
+DKWFImage.propTypes = {
   boxHeight: PropTypes.number.isRequired,
   index: PropTypes.number.isRequired,
   screenHeight: PropTypes.number.isRequired,
@@ -62,4 +62,4 @@ EyepImages.propTypes = {
   scrollPercent: PropTypes.number.isRequired,
 };
 
-export default EyepImages;
+export default DKWFImage;
