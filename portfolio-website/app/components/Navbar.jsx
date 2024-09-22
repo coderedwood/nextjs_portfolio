@@ -23,21 +23,21 @@ const navLinks = [
   }
 ];
 const socialLinks = [
-  {title: "Twitter",
+  {title: "X",
   image:"https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg",
-  path: "/"
+  path: "https://x.com/"
   },
   {title: "Instagram",
   image:"/images/svg/instagram.svg",
-  path: "/"
+  path: "https://instagram.com/"
   },
   {title: "LinkedIn",
   image:"https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg",
-  path: "/"
+  path: "https://www.linkedin.com/in/dwayne-redwood-1762b4105/"
   },
   {title: "Github",
   image:"https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
-  path: "/"
+  path: "https://github.com/coderedwood"
   }
 ];
 
