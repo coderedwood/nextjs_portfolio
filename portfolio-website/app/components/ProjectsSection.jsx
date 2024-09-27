@@ -46,7 +46,7 @@ class ProjectsSection extends Component {
       },
       {
         number: '04',
-        projectName: 'Dwayne Redwood Web Portfolio',
+        projectName: 'Portfolio Website',
         projectDesc: 'Web portfolio to show skillsets and display public portfolio.',
         projectType: 'Website Development',
         roles: ['Frontend Developer', 'Site Designer'],

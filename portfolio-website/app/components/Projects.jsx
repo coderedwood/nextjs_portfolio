@@ -44,7 +44,7 @@ const Projects = () => {
   ];
   return (
     <>
-      {projectData.slice(0, 1).map((project) => (
+      {projectData.map((project) => (
         <ProjectsSection key={project.id} project={project} />
       ))}
     </>
