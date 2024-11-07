@@ -1,103 +1,119 @@
-'use client';
-import React, { useState, useRef, useEffect } from 'react';
-import ProjectsCard from './ProjectsCard';
-import ProjectTag from './ProjectTag';
-import { motion, useInView, AnimatePresence, animate } from 'framer-motion';
+"use client";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import vhCheck from 'vh-check';
+import TextContent from './TextContent';
+import ImageContent from './ImageContent'
 
-const projectData = [
-    {
-        id: 1,
-        title:"OldHarbourNews.com",
-        description: "Serviced and maintained this website",
-        image:"/images/projects/OHN.png",
-        tag:["All","Mobile"],
-        gitUrl:"",
-        projectUrl:"https://www.oldharbournews.com/"
-    },
-    {
-        id: 2,
-        title:"DrKurtWaulFoundation.com",
-        description: "Deployed site for a foundation",
-        image:"/images/projects/DKWF.png",
-        tag:["All", "Web"],
-        gitUrl:"",
-        projectUrl:"https://www.drkurtwaulfoundation.com"
-    },
-    {
-        id: 3,
-        title:"Urgedservices.com",
-        description: "Collaborative development on a commercial food delivery service website",
-        image:"/images/projects/urgedservices.png",
-        tag:["All", "Web","Mobile"],
-        gitUrl:"https://github.com/jammelOSjohnson/urgedinternational.com",
-        projectUrl:"https://urgedservices.com"
-    }
-]
+const Container = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+    /* border: 1px dashed red; */
+`;
 
-
-const ProjectsSection = () => {
-    const [tag, setTag] = useState('All');
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-    const [cardWidth, setCardWidth] = useState(0);
-
-    useEffect(() => {
-        // Set the card width when the component mounts or when the tag changes
-        if (ref.current) {
-          setCardWidth(ref.current.firstChild.offsetWidth);
-        }
-      }, [tag]);
-
-    const handleTagChange = (newTag) => {
-        setTag(newTag);
+class ProjectsSection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      vh: 0,
+      slideNumber: 0,
     };
+    this.pageSplitTimes = 1.3;
+    this.lastScrollTop = 0;
+    this.scrollDirectionDown = true;
+    this.handleScroll = this.handleScroll.bind(this);
+    this.workDetails = [
+      {
+        number: '01',
+        projectName: 'Old Harbour News',
+        projectDesc: 'Administer platform updates, modifications and troubleshoot issues with a local news website.',
+        projectType: 'Content Management System',
+        roles: ['Web Admin', 'Tech Support'],
+      },
+      {
+        number: '02',
+        projectName: 'Dr. Kurt Waul Foundation',
+        projectDesc: "Built, confgured and deployed early version of a website for a non-profit organization.",
+        projectType: 'Content Management System',
+        roles: ['Web Admin', 'Tech Support'],
+      },
+      {
+        number: '03',
+        projectName: 'Urged Services',
+        projectDesc: 'Collaborated on the development of a delivery website for food and other products.',
+        projectType: 'Fullstack Development',
+        roles: ['Co-Developer',],
+      },
+      {
+        number: '04',
+        projectName: 'Portfolio Website',
+        projectDesc: 'Web portfolio to show skillsets and display public portfolio.',
+        projectType: 'Website Development',
+        roles: ['Frontend Developer', 'Site Designer'],
+      }
+    ];
+  }
 
-    const filteredProjects = projectData.filter((project) => project.tag.includes(tag));
-
-    // const cardVariants = {
-    //     initial: (index) => ({ x: -index * cardWidth, y:50, opacity: 0 }), // Set initial x position based on index and cardWidth
-    //     animate: (index) => ({ x: 0, y:0, opacity: 1 }),
-    //     exit: (index) => ({ x: index * cardWidth, y:50, opacity: 0 }) // Exit animation
-    //   };
-    const cardVariants = {
-        initial: { y:50, opacity: 0 }, // Set initial x position based on index and cardWidth
-        animate: {staggerChildren: 0.12, y:0, opacity: 1 },
-        exit: { y:50, opacity: 0 } // Exit animation
-      };
-
-    return (
-        <section id='projects'>
-            <h2 className='text-3xl font-bold mt-3'>My Projects</h2>
-            <div className='text-white flex flex-row justify-center items-center gap-2 py-6'>
-                <ProjectTag onClick={handleTagChange} name='All' isSelected={tag === 'All'} />
-                <ProjectTag onClick={handleTagChange} name='Web' isSelected={tag === 'Web'} />
-                <ProjectTag onClick={handleTagChange} name='Mobile' isSelected={tag === 'Mobile'} />
-            </div>
-            <AnimatePresence mode='sync'>
-                <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
-                    {filteredProjects.map((project) => (
-                        <motion.li
-                            key={project.id}
-                            variants={cardVariants}
-                            initial='initial'
-                            animate={isInView ? 'animate' : 'initial'}
-                            // exit={!(tag===project.tag) ? 'exit':'animate'} // Exit animation
-                            transition={{ duration: 0.3, delay: project.id * 0.4 }}
-                        >
-                            <ProjectsCard
-                                key={project.id}
-                                title={project.title}
-                                description={project.description}
-                                imageUrl={project.image}
-                                gitUrl={project.gitUrl}
-                                projectUrl={project.projectUrl}
-                            />
-                        </motion.li>
-                    ))}
-                </ul>
-            </AnimatePresence>
-        </section>
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+    const vhDiff = vhCheck().offset;
+    this.setState(
+      {
+        vh: Math.round(
+          (window.document.documentElement.clientHeight + vhDiff) * this.pageSplitTimes,
+        ),
+      },
     );
-};
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(event) {
+    const { body, documentElement } = event.srcElement;
+    const { vh, slideNumber } = this.state;
+    const scrollDistance = Math.max(body.scrollTop, documentElement.scrollTop);
+    if (scrollDistance > this.lastScrollTop) {
+      this.scrollDirectionDown = true;
+    } else {
+      this.scrollDirectionDown = false;
+    }
+    this.lastScrollTop = scrollDistance;
+    // console.log(scrollDistance);
+
+    if (Math.floor(scrollDistance / vh) !== slideNumber
+      && slideNumber < this.workDetails.length - 1) {
+      this.setState({ slideNumber: Math.floor(scrollDistance / vh) });
+    } else if (slideNumber === this.workDetails.length - 1
+      && (Math.floor(scrollDistance / vh) < slideNumber)) {
+      this.setState({ slideNumber: Math.floor(scrollDistance / vh) });
+    }
+  }
+
+  changeTextContentBasedOnScroll() {
+    const { slideNumber } = this.state;
+    const refresh = true;
+    return (
+      <TextContent
+        number={this.workDetails[slideNumber].number}
+        projectName={this.workDetails[slideNumber].projectName}
+        projectDesc={this.workDetails[slideNumber].projectDesc}
+        projectType={this.workDetails[slideNumber].projectType}
+        roles={this.workDetails[slideNumber].roles}
+        refreshToggle={refresh}
+      />
+    );
+  }
+
+  render() {
+    return (
+      <Container>
+        {this.changeTextContentBasedOnScroll()}
+        <ImageContent pageSplitTimes={this.pageSplitTimes} />
+      </Container>
+    );
+  }
+}
 
 export default ProjectsSection;
