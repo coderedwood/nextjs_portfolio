@@ -26,7 +26,7 @@ class ProjectsSection extends Component {
       {
         number: '01',
         projectName: 'Old Harbour News',
-        projectDesc: 'Administer platform updates, modifications and troubleshoot issues with a local new website.',
+        projectDesc: 'Administer platform updates, modifications and troubleshoot issues with a local news website.',
         projectType: 'Content Management System',
         roles: ['Web Admin', 'Tech Support'],
       },
