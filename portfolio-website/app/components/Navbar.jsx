@@ -13,22 +13,22 @@ const navLinks = [
   {title: "About",
   path: "/about"
   },
-  {title: "Projects",
-  path: "/projects"
-  },
-  {title: "Contact",
-  path: "/contact"
-  }
+  // {title: "Projects",
+  // path: "/projects"
+  // },
+  // {title: "Contact",
+  // path: "/contact"
+  // }
 ];
 const socialLinks = [
-  {title: "X",
-  image:"https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg",
-  path: "https://x.com/"
-  },
-  {title: "Instagram",
-  image:"/images/svg/instagram.svg",
-  path: "https://instagram.com/"
-  },
+  // {title: "X",
+  // image:"https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg",
+  // path: "https://x.com/"
+  // },
+  // {title: "Instagram",
+  // image:"/images/svg/instagram.svg",
+  // path: "https://instagram.com/"
+  // },
   {title: "LinkedIn",
   image:"https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg",
   path: "https://www.linkedin.com/in/dwayne-redwood-1762b4105/"
